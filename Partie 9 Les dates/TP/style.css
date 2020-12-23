@@ -1,0 +1,15 @@
+.month {
+    border-color: black;
+}
+
+th {
+    background-color: gray;
+    color: white;
+    width: 8rem;
+    height: 3rem;
+}
+
+td {
+    border: black solid 1px;
+    height: 5rem;
+}
