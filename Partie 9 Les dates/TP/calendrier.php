@@ -81,10 +81,14 @@ class Date
                         <tbody>
                             <tr>
                                 <?php $end = end($days); foreach ($days as $d=>$N) : ?>
-                                    <?php if($d == 1) : ?>
+                                    <?php if($d == 1 && $N == 1) : ?>
+                                    <?php echo "" ?>
+                                    <?php elseif($d == 1) : ?>
                                     <td colspan="<?php echo $N-1 ?>" style="background-color: gray;"></td>
                                 <?php endif  ?> 
+
                                     <td><?php echo $d ?> </td>
+
                                     <?php if($N == 7) : ?>
                                     </tr><tr>
                                 <?php endif  ?> 
