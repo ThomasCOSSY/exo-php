@@ -7,9 +7,14 @@ th {
     color: white;
     width: 8rem;
     height: 3rem;
+    
 }
 
 td {
     border: black solid 1px;
     height: 5rem;
+}
+
+.formulaire {
+    background-color: red;
 }
