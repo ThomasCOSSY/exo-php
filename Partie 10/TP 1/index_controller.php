@@ -44,7 +44,7 @@ if (isset($_POST['submit'])) {
             $messageError['firstName'] = 'Le nom doit contenir de 2 à 20 caractères';
         } else {
             $secureFirstName = htmlspecialchars($_POST['firstName']);
-            $messageError['firstName'] = '<i class="fas fa-check formValid"></i>';
+            $messageSuccess['firstName'] = '<i class="fas fa-check formValid"></i>';
         }
     }
 
@@ -61,7 +61,7 @@ if (isset($_POST['submit'])) {
             $messageError['birthDate'] = 'Le format de date n\'est pas valide';
         } else {
             $secureBirthDate = htmlspecialchars($dateCorrectFormat);
-            $messageError['birthDate'] = '<i class="fas fa-check formValid"></i>';
+            $messageSuccess['birthDate'] = '<i class="fas fa-check formValid"></i>';
         }
     }
 
@@ -74,7 +74,7 @@ if (isset($_POST['submit'])) {
             $messageError['birthCountry'] = 'Le pays doit contenir de 2 à 40 caractères';
         } else {
             $secureBirthCountry = htmlspecialchars($_POST['birthCountry']);
-            $messageError['birthCountry'] = '<i class="fas fa-check formValid"></i>';
+            $messageSuccess['birthCountry'] = '<i class="fas fa-check formValid"></i>';
         }
     }
 
@@ -87,7 +87,7 @@ if (isset($_POST['submit'])) {
             $messageError['nationality'] = 'Le pays doit contenir de 2 à 40 caractères';
         } else {
             $secureNationality = htmlspecialchars($_POST['nationality']);
-            $messageError['nationality'] = '<i class="fas fa-check formValid"></i>';
+            $messageSuccess['nationality'] = '<i class="fas fa-check formValid"></i>';
         }
     }
 
@@ -100,7 +100,7 @@ if (isset($_POST['submit'])) {
             $messageError['adress'] = 'L\'adresse doit contenir de 2 à 50 caractères';
         } else {
             $secureAdress = htmlspecialchars($_POST['adress']);
-            $messageError['adress'] = '<i class="fas fa-check formValid"></i>';
+            $messageSuccess['adress'] = '<i class="fas fa-check formValid"></i>';
         }
     }
 
@@ -110,7 +110,7 @@ if (isset($_POST['submit'])) {
             $messageError['mail'] = 'Le champs est vide';
         } else if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
             $secureMail = $_POST['mail'];
-            $messageError['mail'] = '<i class="fas fa-check formValid"></i>';
+            $messageSuccess['mail'] = '<i class="fas fa-check formValid"></i>';
         } else {
             $messageError['mail'] = 'L\'email n\'est pas valide';
         }
@@ -123,14 +123,14 @@ if (isset($_POST['submit'])) {
             $messageError['phoneNumber'] = 'Le pays de naissance n\'est pas valide';
         } else {
             $securePhoneNumber = htmlspecialchars($_POST['phoneNumber']);
-            $messageError['phoneNumber'] = '<i class="fas fa-check formValid"></i>';
+            $messageSuccess['phoneNumber'] = '<i class="fas fa-check formValid"></i>';
         }
     }
 
     if (!array_key_exists($_POST['degree'], $degreesArray)) {
         $messageError['degree'] = 'Veuillez sélectionner un choix';
     } else {
-        $messageError['degree'] = '<i class="fas fa-check formValid"></i>';
+        $messageSuccess['degree'] = '<i class="fas fa-check formValid"></i>';
         $secureDegree = $_POST['degree'];
     }
 
@@ -141,7 +141,7 @@ if (isset($_POST['submit'])) {
             $messageError['poleEmploi'] = 'Le numéro n\'est pas valide';
         } else {
             $securePoleEmploi = htmlspecialchars($_POST['poleEmploi']);
-            $messageError['poleEmploi'] = '<i class="fas fa-check formValid"></i>';
+            $messageSuccess['poleEmploi'] = '<i class="fas fa-check formValid"></i>';
         }
     }
 
@@ -152,7 +152,7 @@ if (isset($_POST['submit'])) {
             $messageError['badgeNumber'] = 'Le numéro n\'est pas valide';
         } else {
             $securebadgeNumber = htmlspecialchars($_POST['badgeNumber']);
-            $messageError['badgeNumber'] = '<i class="fas fa-check formValid"></i>';
+            $messageSuccess['badgeNumber'] = '<i class="fas fa-check formValid"></i>';
         }
     }
 
@@ -162,7 +162,7 @@ if (isset($_POST['submit'])) {
             $messageError['codeAcademy'] = 'Le champs est vide';
         } else if (filter_var($url, FILTER_VALIDATE_URL)) {
             $secureCodeAcademy = $_POST['codeAcademy'];
-            $messageError['codeAcademy'] = '<i class="fas fa-check formValid"></i>';
+            $messageSuccess['codeAcademy'] = '<i class="fas fa-check formValid"></i>';
         } else {
             $messageError['codeAcademy'] = 'Le lien n\'est pas valide';
         }
@@ -173,7 +173,7 @@ if (isset($_POST['submit'])) {
             $messageError['superHero'] = 'Le champs est vide';
         } else {
             $secureSuperHero = htmlspecialchars($_POST['superHero']);
-            $messageError['superHero'] = '<i class="fas fa-check formValid"></i>';
+            $messageSuccess['superHero'] = '<i class="fas fa-check formValid"></i>';
         }
     }
 
@@ -182,7 +182,7 @@ if (isset($_POST['submit'])) {
             $messageError['hackStory'] = 'Le champs est vide';
         } else {
             $secureHackStory = htmlspecialchars($_POST['hackStory']);
-            $messageError['hackStory'] = '<i class="fas fa-check formValid"></i>';
+            $messageSuccess['hackStory'] = '<i class="fas fa-check formValid"></i>';
         }
     }
 
